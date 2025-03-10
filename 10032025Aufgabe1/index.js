@@ -1,13 +1,10 @@
 let itemList = [];
 let input;
 
-function eingabeInListe() {
+function addListItem() {
     input = document.getElementById("listItem").value; //Eingaben aus der Textbox in eine Variable laden
     itemList = input.split(","); //Eingaben in ein Array laden
     console.log(itemList);
-}
-function addListItem() {
-    eingabeInListe();
     document.getElementById("listItem").value = ""; //Textbox leeren
 }
 
