@@ -1,24 +1,29 @@
 let itemList = [];
 let input;
-//let isEditClicked = false;
-//let isDelClicked = false;
+let isEditClicked = false;
+let isDelClicked = false;
 let editId;
 let delId;
 
 
 function addListItem() {
+    if(document.getElementById("listItem").value == "") {
+        alert("Bitte geben Sie einen Wert ein!");
+        return;
+    }
     if (isEditClicked) {
         let input = document.getElementById("listItem").value;
         itemList[editId] = input;
-        outputList();
         isEditClicked = false;
+        document.getElementById("listItem").value = "";
+        outputList();
+        
     }else{
         input = document.getElementById("listItem").value; //Eingaben aus der Textbox in eine Variable laden
         itemList = input.split(","); //Eingaben in ein Array laden
         console.log(itemList);
         document.getElementById("listItem").value = ""; //Textbox leeren
     }
-  
 }
 
 function outputList() {
@@ -44,7 +49,7 @@ function editListItem(buttonId) {
     let index = bId.slice(4);
     editId = index;
     let input = document.getElementById(`item${index}`).innerText;
-    document.getElementById("listItem").value = input;
+    document.getElementById("listItem").value = input.trim();
 
 }
 
@@ -56,3 +61,10 @@ function delListItem(buttonId) {
     itemList.splice(index, 1);
     outputList();
 }
+
+
+function deleteList() {
+    itemList = [];
+    outputList();
+}
+

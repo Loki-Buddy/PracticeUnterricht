@@ -9,17 +9,23 @@
     </head>
     <body>
         <input type="text" id="listItem" />
+        <p id="ausgabe"></p>
         <button id="add" onclick="addListItem()">Confirm</button>
         <br>
         <br>
         <br>
         <br>
         <button id="launch" onclick="outputList()">Create List</button>
+        <br>
         <div>
             <ul id="output">
                 
             </ul>
         </div>
-        
+        <div>
+            <button class="buttonGroup" id="delete" onclick="deleteList()">Delete All</button>
+            <button class="buttonGroup" id="delFirst" onclick="deleteFirst()">Delete First Item</button>
+            <button class="buttonGroup" id="delLast" onclick="deleteLast()">Delete Last Item</button>
+        </div>
     </body>
 </html>

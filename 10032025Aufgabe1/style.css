@@ -8,3 +8,9 @@
 .ItemButtons img{
     vertical-align: middle;
 }
+
+.buttonGroup{
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+}
