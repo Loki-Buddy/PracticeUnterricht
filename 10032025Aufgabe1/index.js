@@ -1,7 +1,7 @@
 let itemList = [];
 let input;
-let isEditClicked = false;
-let isDelClicked = false;
+//let isEditClicked = false;
+//let isDelClicked = false;
 let editId;
 let delId;
 
@@ -22,7 +22,7 @@ function addListItem() {
 }
 
 function outputList() {
-    
+
     let output = "";
     for (let i = 0; i < itemList.length; i++) {
         output += 
