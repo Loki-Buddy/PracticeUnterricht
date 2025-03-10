@@ -1,0 +1,10 @@
+.ItemButtons{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.ItemButtons img{
+    vertical-align: middle;
+}
