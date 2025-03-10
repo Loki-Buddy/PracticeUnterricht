@@ -24,6 +24,7 @@ function addListItem() {
         console.log(itemList);
         document.getElementById("listItem").value = ""; //Textbox leeren
     }
+
 }
 
 function outputList() {
@@ -65,6 +66,16 @@ function delListItem(buttonId) {
 
 function deleteList() {
     itemList = [];
+    outputList();
+}
+
+function deleteFirst(){
+    itemList.shift();
+    outputList();
+}
+
+function deleteLast(){
+    itemList.pop();
     outputList();
 }
 
